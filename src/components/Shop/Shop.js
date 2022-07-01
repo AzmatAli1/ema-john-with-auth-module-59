@@ -3,6 +3,7 @@ import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
+
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
@@ -26,6 +27,7 @@ const Shop = () => {
         }
         setCart(savedCard);
     },[products])
+    
 
    /*  useEffect(() => {
         console.log('loacal storage first line',products);
@@ -76,6 +78,7 @@ const Shop = () => {
                 ></Product>) 
               } 
             </div>
+            
             <div className="cart-container">
                 <Cart cart={cart}></Cart>
             </div>
